@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+
+.button-container {
+    height: 100px;
+    background-color: #c3f63b;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#add-to-cart {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #353b48;
+    color:#c3f63b;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    height: 56px;
+    border-radius: 50px;
+    border: none;
+    padding: 0 49px;
+    box-shadow: 10px 10px #f5f6fa;
+    transition: .2s;
+}
+
+#add-to-cart:hover {
+    transform: translate(10px, 10px);
+    box-shadow: -10px -10px white;
+    background-color: #f5f6fa;
+    color: #353b48;
+    box-shadow: -10px -10px #353b48;
+}
