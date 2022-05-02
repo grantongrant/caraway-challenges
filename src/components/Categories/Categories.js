@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import './Categories.css';
 
-const CategoryView = ({products, categories, setCategory, challenges, setChallenges}) => {
+const CategoryView = ({products, categories, setCategory, challenges, setChallenges, startIndex, setStartIndex, endIndex, setEndIndex}) => {
 
     const isLoading = <div className="loading">Loading...</div>
 
     const categoryList = categories?.map((category) => 
         <li key={category} onClick={e => {
             setCategory(category)
-            setChallenges(false)}}>
+            setChallenges(false)
+            setStartIndex(1)
+            setEndIndex(12)}}>
             {category}</li>
     );
     

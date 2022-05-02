@@ -12,6 +12,8 @@ function App() {
     const [ productsByCategory, setProductsByCategory ] = useState();
     const [ category, setCategory ] = useState("");
     const [ challenges, setChallenges ] = useState(false);
+    const [ startIndex, setStartIndex ] = useState(1);
+    const [ endIndex, setEndIndex ] = useState(12);
 
     const createCategories = (products) => {
         const categoryArray = [];
@@ -43,13 +45,19 @@ function App() {
           categories={categories}
           setCategory={setCategory}
           challenges={challenges}
-          setChallenges={setChallenges}/>
+          setChallenges={setChallenges}
+          startIndex={startIndex}
+          setStartIndex={setStartIndex}
+          endIndex={endIndex}
+          setEndIndex={setEndIndex}/>
         <Gallery 
           products={productsByCategory}
           category={category}
-          setCategory={setCategory}
           challenges={challenges}
-          setChallenges={setChallenges}/>
+          startIndex={startIndex}
+          setStartIndex={setStartIndex}
+          endIndex={endIndex}
+          setEndIndex={setEndIndex}/>
         <ChallengeOne 
           challenges={challenges}/>
         <ChallengeTwo 

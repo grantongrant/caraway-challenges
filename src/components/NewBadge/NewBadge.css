@@ -8,4 +8,7 @@
     font-weight: 800;
     letter-spacing: -.5px;
     border-radius: 100px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 10px;
 }
