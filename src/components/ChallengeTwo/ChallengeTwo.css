@@ -15,15 +15,24 @@
     position: relative;
 }
 
-
-.input.hover ~ .label,
-.input:not(:focus):valid ~ .label {
+.input:not(:hover) ~.label {
     left: 30px;
+    top: 28px;
+    font-size: 15px;
+    color: gray;
+}
+
+.input:not(:focus):hover ~.label {
+    left: 20px;
     top: 28px;
     font-size:15px;
     opacity: 1;
     color: rgb(148,148,148);
 }
+
+.input:valid ~.label {
+    display: none;
+} 
 
 .input {
     background-color: white;
@@ -33,32 +42,34 @@
     height: 43px;
     width: 232px;
     font-size: 15px;
-    padding-left: 18px;
+    font-weight: 500;
+    padding-left: 10px;
     transition: .5s ease-in-out;
     box-shadow: 2px 2px 5px #5e5396;
     position: relative;
 }
 
-.label {
+.label, .input:focus:empty ~.label {
     position: absolute;
-    left: -8px;
+    left: -2px;
     top: -8px;
-    transition: 0.5s ease all;
+    transition: 0.5s ease-in-out;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
     letter-spacing: -.5px;
+    pointer-events: none;
 }
 
 .input:focus:invalid {
     color: black;
 }
 
-.input:hover {
+.input:hover, .input:hover ~.label {
     transform: scale(1.2);
 }
 
-.input:focus{
+.input:focus {
     border: 2px solid #2c3e50;
     outline: none;
     outline-offset: 0px;
