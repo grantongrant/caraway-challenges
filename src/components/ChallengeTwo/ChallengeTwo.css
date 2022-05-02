@@ -2,8 +2,8 @@
 .input-container{
     background-color: #9c88ff;
     height: 200px;
-    width: 100%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

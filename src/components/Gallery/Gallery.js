@@ -16,7 +16,7 @@ const Gallery = ({products, category, setCategory, challenges, setChallenges}) =
         <>
         { products && !challenges &&
         <>
-            <h2>{category}</h2> 
+            <p>{category}</p> 
             <div className="product-gallery"> {productGallery}</div> 
         </> }
         </>

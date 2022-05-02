@@ -1,0 +1,11 @@
+.new-badge {
+    background-color: #40ad98;
+    width: 50px;
+    padding: 4px 2px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+    border-radius: 100px;
+}
