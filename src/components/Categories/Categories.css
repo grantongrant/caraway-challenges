@@ -1,0 +1,22 @@
+* {
+    list-style: none;
+    margin: 0;
+}
+
+.category-container {
+    height: 100%;
+    background-color: blue;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.loading {
+    font-size: 25px;
+}

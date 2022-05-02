@@ -2,10 +2,10 @@
 
 
 .button-container {
-    height: 100px;
+    height: 200px;
     background-color: #c3f63b;
     width: 100%;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     justify-content: center;
     padding: 10px;

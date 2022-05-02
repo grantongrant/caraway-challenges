@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import CategoryView from './components/Categories/Categories';
 import ChallengeOne from './components/ChallengeOne/ChallengeOne';
+import Gallery from './components/Gallery/Gallery';
 import ChallengeTwo from './components/ChallengeTwo/ChallengeTwo';
-import CategoryView from './components/Category/Category';
 
 function App() {
 
-    const [products, setProducts] = useState();
-    const [categories, setCategories] = useState();
-    const [productsByCategory, setProductsByCategory] = useState();
-    const [category, setCategory] = useState("");
-    console.log(productsByCategory)
+    const [ products, setProducts ] = useState();
+    const [ categories, setCategories ] = useState();
+    const [ productsByCategory, setProductsByCategory ] = useState();
+    const [ category, setCategory ] = useState("");
+    const [ challenges, setChallenges ] = useState(false);
 
     const createCategories = (products) => {
         const categoryArray = [];
@@ -37,9 +38,22 @@ function App() {
 
   return (
     <div className="App">
-      <ChallengeOne/>
-      <ChallengeTwo/>
-      <CategoryView products={productsByCategory} categories={categories} category={category} setCategory={setCategory}/>
+        <CategoryView 
+          products={productsByCategory} 
+          categories={categories}
+          setCategory={setCategory}
+          challenges={challenges}
+          setChallenges={setChallenges}/>
+        <Gallery 
+          products={productsByCategory}
+          category={category}
+          setCategory={setCategory}
+          challenges={challenges}
+          setChallenges={setChallenges}/>
+        <ChallengeOne 
+          challenges={challenges}/>
+        <ChallengeTwo 
+          challenges={challenges}/>
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.product-gallery {
+    width: 95%;
+    max-width: 1200px;
+    min-height: 550px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}

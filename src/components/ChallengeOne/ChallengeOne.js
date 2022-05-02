@@ -1,10 +1,12 @@
 import './ChallengeOne.css';
 
-const ChallengeOne = () => {
+const ChallengeOne = ({challenges}) => {
     return (
-        <div className="button-container">
-        <button id="add-to-cart">ADD TO CART</button>
-        </div>
+        <>
+        {challenges && <div className="button-container">
+            <button id="add-to-cart">ADD TO CART</button>
+        </div>}
+        </>
     )
 };
 
