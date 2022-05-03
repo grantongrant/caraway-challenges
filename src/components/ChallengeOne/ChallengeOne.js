@@ -5,7 +5,7 @@ const ChallengeOne = ({challenges}) => {
         <>
         {challenges && 
             <>
-            <p>Challenges</p>
+            <p className="category-title challenge">Challenges</p>
             <div className="button-container">
                 <button id="add-to-cart">ADD TO CART</button>
             </div>

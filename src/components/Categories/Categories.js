@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Categories.css';
+import Loading from '../Loading/LoadingOne';
 
 const CategoryView = ({products, categories, setCategory, challenges, setChallenges, startIndex, setStartIndex, endIndex, setEndIndex}) => {
-
-    const isLoading = <div className="loading">Loading...</div>
 
     const categoryList = categories?.map((category) => 
         <li key={category} onClick={e => {
@@ -16,12 +15,11 @@ const CategoryView = ({products, categories, setCategory, challenges, setChallen
     
     return (
         <> 
-        { !products && !challenges && isLoading }
         <div className="category-container">
-            { categories && 
+            { categories ? 
             <ul className="category-list">{categoryList}
                 <li onClick={e => setChallenges(true)}>Challenges</li>
-            </ul> }
+            </ul>: <Loading/>}
         </div>
         </>
     )

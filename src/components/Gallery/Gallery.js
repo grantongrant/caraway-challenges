@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from 'react-icons/ai'
 
 import './Gallery.css';
+import Loading from '../Loading/LoadingOne';
 
 const Gallery = ({products, category, challenges, startIndex, setStartIndex, endIndex, setEndIndex}) => {
-
-    console.log(products)
 
     const viewPrevious = () => {
         let start = startIndex;
@@ -29,7 +28,7 @@ const Gallery = ({products, category, challenges, startIndex, setStartIndex, end
         { products && !challenges &&
         <>
             <div className="gallery-header">
-                <p id="category-title">{category}</p>
+                <p className="category-title">{category}</p>
                 <div id="view-count">
                     {startIndex > 1 &&
                     <button type="button" className="view-button" onClick={viewPrevious}><AiOutlineDoubleLeft/></button>}
@@ -39,9 +38,9 @@ const Gallery = ({products, category, challenges, startIndex, setStartIndex, end
                 </div>
             </div>
             <div className="product-gallery"> {products?.slice(startIndex -1, endIndex).map((product) => (
-                <ProductCard product={product}/>))}
+                <ProductCard category={category} startIndex={startIndex} product={product}/>))}
             </div> 
-        </> }
+            </>}
         </>
     )
 }
