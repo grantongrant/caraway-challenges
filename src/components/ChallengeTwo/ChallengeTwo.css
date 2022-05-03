@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
 .input-container{
     background-color: #9c88ff;
@@ -10,6 +11,7 @@
     padding: 10px;
     align-items: center;
     max-width: 1200px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper {
@@ -20,7 +22,7 @@
     left: 30px;
     top: 28px;
     font-size: 15px;
-    color: gray;
+    color: rgb(148,148,148);
 }
 
 .input:not(:focus):hover ~.label {
@@ -31,7 +33,7 @@
     color: rgb(148,148,148);
 }
 
-.input:valid ~.label {
+.input:not(:placeholder-shown):valid ~.label {
     display: none;
 } 
 
