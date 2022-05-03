@@ -24,7 +24,8 @@
     border-radius: 50px;
     border: none;
     padding: 0 49px;
-    box-shadow: 10px 10px #f5f6fa;
+    filter: drop-shadow(10px 10px #f5f6f5);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     transition: .2s;
 }
 
@@ -34,6 +35,7 @@
     background-color: #f5f6fa;
     color: #353b48;
     box-shadow: -10px -10px #353b48;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
 }
 
 .challenge {
