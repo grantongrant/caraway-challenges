@@ -1,8 +1,8 @@
 .product-card {
-    width: 31%;
+    width: 33.33%;
     max-height: 700px;
     min-height: 200px;
-    padding: 20px 1.1%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     height: 100%;
