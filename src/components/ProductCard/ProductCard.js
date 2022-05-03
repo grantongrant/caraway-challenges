@@ -31,7 +31,7 @@ const ProductCard = ({product}) => {
                 <div className="title">{product.title.split("-")[0]}</div>
                 <div className="price">${product.variants[0].price.split(".")[0]}</div>
             </div>
-            <div className="variants">{product.title.split("-")[1].split("(")[0]}</div>
+            <div className="variants">{product.title.split("-")[1]}</div>
             <div className="variants">{product.variants.length > 1 ? `${product.variants.length} Styles Available` : '1 Style Available'}</div>
         </div>
     )
