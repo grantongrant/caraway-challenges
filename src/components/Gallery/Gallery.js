@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from 'react-icons/ai'
-
 import './Gallery.css';
-import Loading from '../Loading/LoadingOne';
 
 const Gallery = ({products, category, challenges, startIndex, setStartIndex, endIndex, setEndIndex}) => {
 

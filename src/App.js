@@ -36,7 +36,7 @@ function App() {
 
     useEffect(() => {
       setProductsByCategory(products?.filter(product => product.product_type === category))
-    }, [category])
+    }, [category, products])
 
   return (
     <div className="App">

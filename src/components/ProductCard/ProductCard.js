@@ -22,8 +22,8 @@ const ProductCard = ({ category, startIndex, product }) => {
     return (
         <div className="product-card" key={product.id}>
             <div className="product-image hidden">
-                <img src={photoCollection[0]}/>
-                <img src={photoCollection[1]}/>
+                <img src={photoCollection[0]} alt="hidden1"/>
+                <img src={photoCollection[1]} alt="hidden2"/>
             </div>
             {!loaded ? <LoadingTwo/> :
             <>
