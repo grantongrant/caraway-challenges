@@ -50,15 +50,16 @@
     transition: .5s ease-in-out;
     box-shadow: 2px 2px 5px #5e5396;
     position: relative;
+    transition: .5s ease-in-out;
 }
 
 .label, .input:focus:empty ~.label {
     position: absolute;
-    left: -2px;
+    left: -8px;
     top: -8px;
     transition: 0.5s ease-in-out;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 12px;
     color: white;
     letter-spacing: -.5px;
     pointer-events: none;
@@ -68,7 +69,7 @@
     color: black;
 }
 
-.input:hover, .input:hover ~.label {
+.input:hover, .input:not(:focus):hover ~.label {
     transform: scale(1.2);
 }
 
@@ -79,6 +80,3 @@
     transform: scale(1.2);
     color: green;
 }
-
-
-
